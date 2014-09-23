@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="video" ng-controller="Main">
+        <h3 ng-src="{{Name}}" >{{Name}}</h3>
+        <iframe width="560" height="285" ng-src="{{embedUrl}}" frameborder="0" allowfullscreen></iframe>
+        <br>
+        <center>
+        <button><a ng-href={{downUrl}} ng-src="{{dwnUrl}}" target="_blank">Download 1</a></button>
+        <button><a ng-href={{downUrl2}} ng-src="{{dwnUrl2}}" target="_blank">Download 2</a></button>
+        </center>
+        <ul>
+            <li ng-repeat="v in videos" ng-click="setVideo(v.url); setTitle(v.name);" >{{v.name}}</li>
+        </ul>
+    </div>
+</body>
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/script.js"></script>
+</html>
+
+
+
+
+    
